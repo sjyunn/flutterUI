@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uitestapp/widgets/button_tes.dart';
+import 'package:uitestapp/widgets/control_card.dart';
+import 'package:uitestapp/widgets/notice.dart';
 
 void main() {
   runApp(const App());
@@ -20,21 +23,24 @@ class App extends StatelessWidget {
         ),
         cardColor: const Color(0xFFF4EDDB),
       ),
-      home: Scaffold(
-        backgroundColor: const Color(0xFF181818),
+      home: const Scaffold(
+        backgroundColor: Color(0xFF181818),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                height: 40,
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Notice(
+                      isConnected: true,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -57,50 +63,64 @@ class App extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 60,
-              ),
-              Text(
-                'Total Balance',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.white.withOpacity(0.8),
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                '\$5 194 482',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white.withOpacity(0.8),
-                ),
-              ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 18,
-                        horizontal: 50,
-                      ),
-                      child: Text(
-                        'Transfer',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                  ),
+                  ButtonTes(isStarted: true),
                 ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ControlCard(
+                name: '모드전환',
+                code: '힐링모드',
+                icon_left: Icons.arrow_circle_left_outlined,
+                icon_right: Icons.arrow_circle_right_outlined,
+                isInverted: true,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              ControlCard(
+                name: '테라피 작동 시간',
+                code: '30분',
+                icon_left: Icons.arrow_circle_down_outlined,
+                icon_right: Icons.arrow_circle_up_outlined,
+                isInverted: true,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              ControlCard(
+                name: 'TES 세기',
+                code: '3단계',
+                icon_left: Icons.arrow_circle_down_outlined,
+                icon_right: Icons.arrow_circle_up_outlined,
+                isInverted: true,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              ControlCard(
+                name: '볼륨 세기',
+                code: '5단계',
+                icon_left: Icons.arrow_circle_down_outlined,
+                icon_right: Icons.arrow_circle_up_outlined,
+                isInverted: true,
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              ControlCard(
+                name: '곡 변경',
+                code: '숲속의 아침',
+                icon_left: Icons.arrow_circle_left_outlined,
+                icon_right: Icons.arrow_circle_right_outlined,
+                isInverted: true,
               ),
             ],
           ),
