@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uitestapp/widgets/button.dart';
 import 'package:uitestapp/widgets/button_tes.dart';
 import 'package:uitestapp/widgets/control_card.dart';
 import 'package:uitestapp/widgets/notice.dart';
@@ -51,6 +52,9 @@ class App extends StatelessWidget {
                             fontSize: 26,
                             fontWeight: FontWeight.w500,
                           ),
+                        ),
+                        SizedBox(
+                          height: 2,
                         ),
                         Text(
                           'Mobifren',
@@ -121,6 +125,24 @@ class App extends StatelessWidget {
                 icon_left: Icons.arrow_circle_left_outlined,
                 icon_right: Icons.arrow_circle_right_outlined,
                 isInverted: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Button(
+                    text: '사용법 보기',
+                    bgColor: Colors.lime,
+                    textColor: Colors.black,
+                  ),
+                  Button(
+                    text: ' 체험 리뷰 ',
+                    bgColor: Colors.lime,
+                    textColor: Colors.black,
+                  ),
+                ],
               ),
             ],
           ),

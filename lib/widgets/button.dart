@@ -17,12 +17,12 @@ class Button extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: bgColor,
-        borderRadius: BorderRadius.circular(45),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          vertical: 15,
-          horizontal: 44,
+          vertical: 20,
+          horizontal: 40,
         ),
         child: Text(
           text,
