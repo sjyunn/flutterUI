@@ -27,7 +27,7 @@ class App extends StatelessWidget {
       home: const Scaffold(
         backgroundColor: Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,7 +77,7 @@ class App extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
               ControlCard(
                 name: '모드전환',
